@@ -10,6 +10,6 @@ import Foundation
 
 struct School: Codable {
     let school_name: String
-    let latitude: Double
-    let longitude: Double
+    let latitude: String
+    let longitude: String
 }

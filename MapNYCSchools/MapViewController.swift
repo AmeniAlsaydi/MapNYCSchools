@@ -9,10 +9,27 @@
 import UIKit
 
 class MapViewController: UIViewController {
+    
+    var schools = [School]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        getSchools()
+       
+    }
+    
+    private func getSchools() {
+        apiClient.getSchools { (result) in
+            switch result {
+            case .failure(let appError):
+                print("error getting schools: \(appError)")
+            case .success(let schools):
+                self.schools = schools
+                print(schools.count )
+            }
+        }
     }
 
 
