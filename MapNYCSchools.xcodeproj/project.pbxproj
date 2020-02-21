@@ -3,27 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B76B1D802400920A0075A8E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B1D7F2400920A0075A8E4 /* AppDelegate.swift */; };
 		B76B1D822400920A0075A8E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B1D812400920A0075A8E4 /* SceneDelegate.swift */; };
-		B76B1D842400920A0075A8E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B1D832400920A0075A8E4 /* ViewController.swift */; };
+		B76B1D842400920A0075A8E4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B1D832400920A0075A8E4 /* MapViewController.swift */; };
 		B76B1D872400920A0075A8E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76B1D852400920A0075A8E4 /* Main.storyboard */; };
 		B76B1D892400920C0075A8E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76B1D882400920C0075A8E4 /* Assets.xcassets */; };
 		B76B1D8C2400920C0075A8E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76B1D8A2400920C0075A8E4 /* LaunchScreen.storyboard */; };
+		B76B1D94240095DA0075A8E4 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B1D93240095DA0075A8E4 /* APIClient.swift */; };
+		B76B1D96240096BB0075A8E4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B1D95240096BB0075A8E4 /* Model.swift */; };
+		B76B1D99240097F90075A8E4 /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = B76B1D98240097F90075A8E4 /* ImageKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B76B1D7C2400920A0075A8E4 /* MapNYCSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapNYCSchools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76B1D7F2400920A0075A8E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B76B1D812400920A0075A8E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B76B1D832400920A0075A8E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B76B1D832400920A0075A8E4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B76B1D862400920A0075A8E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B76B1D882400920C0075A8E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B76B1D8B2400920C0075A8E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B76B1D8D2400920C0075A8E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B76B1D93240095DA0075A8E4 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		B76B1D95240096BB0075A8E4 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76B1D99240097F90075A8E4 /* ImageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +64,9 @@
 			children = (
 				B76B1D7F2400920A0075A8E4 /* AppDelegate.swift */,
 				B76B1D812400920A0075A8E4 /* SceneDelegate.swift */,
-				B76B1D832400920A0075A8E4 /* ViewController.swift */,
+				B76B1D832400920A0075A8E4 /* MapViewController.swift */,
+				B76B1D93240095DA0075A8E4 /* APIClient.swift */,
+				B76B1D95240096BB0075A8E4 /* Model.swift */,
 				B76B1D852400920A0075A8E4 /* Main.storyboard */,
 				B76B1D882400920C0075A8E4 /* Assets.xcassets */,
 				B76B1D8A2400920C0075A8E4 /* LaunchScreen.storyboard */,
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = MapNYCSchools;
+			packageProductDependencies = (
+				B76B1D98240097F90075A8E4 /* ImageKit */,
+			);
 			productName = MapNYCSchools;
 			productReference = B76B1D7C2400920A0075A8E4 /* MapNYCSchools.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = B76B1D732400920A0075A8E4;
+			packageReferences = (
+				B76B1D97240097F90075A8E4 /* XCRemoteSwiftPackageReference "ImageKit" */,
+			);
 			productRefGroup = B76B1D7D2400920A0075A8E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B76B1D842400920A0075A8E4 /* ViewController.swift in Sources */,
+				B76B1D96240096BB0075A8E4 /* Model.swift in Sources */,
+				B76B1D842400920A0075A8E4 /* MapViewController.swift in Sources */,
 				B76B1D802400920A0075A8E4 /* AppDelegate.swift in Sources */,
 				B76B1D822400920A0075A8E4 /* SceneDelegate.swift in Sources */,
+				B76B1D94240095DA0075A8E4 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +354,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B76B1D97240097F90075A8E4 /* XCRemoteSwiftPackageReference "ImageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexpaul/ImageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B76B1D98240097F90075A8E4 /* ImageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B76B1D97240097F90075A8E4 /* XCRemoteSwiftPackageReference "ImageKit" */;
+			productName = ImageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B76B1D742400920A0075A8E4 /* Project object */;
 }
