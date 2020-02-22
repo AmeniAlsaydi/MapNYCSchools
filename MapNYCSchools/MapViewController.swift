@@ -18,14 +18,16 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "NYC Schools"
         
         mapView.showsUserLocation = true
-       // mapView.delegate = self
+        mapView.delegate = self
         
         getSchools()
          
        
     }
+    
     
     private func getSchools() {
         apiClient.getSchools { [weak self] (result) in
@@ -54,7 +56,7 @@ class MapViewController: UIViewController {
             annotations.append(annotation)
         }
         
-        // using .map
+        // can i use .map?
         
         return annotations
     }
@@ -64,9 +66,38 @@ class MapViewController: UIViewController {
         mapView.addAnnotations(annotations)
         mapView.showAnnotations(annotations, animated: true)
     }
-    
 }
 
-//extension MapViewController: MKMapViewDelegate {
-//
-//}
+extension MapViewController: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+
+        
+        // get selected school
+        
+        guard let schoolName = view.annotation?.title else {
+            return
+        }
+        
+        print(schoolName ?? "amy")
+        
+        //let annotations = makeSchoolAnnotation()
+        guard let school = (schools.filter { $0.school_name == schoolName ?? "amy"}).first else {
+            return
+        }
+        
+        
+        let storyboard = self.storyboard
+        guard let detailVC = storyboard?.instantiateViewController(identifier: "DetailViewController") as? DetailViewController else {
+            fatalError("could not downcast to detailVC")
+        }
+        
+        detailVC.school = school 
+        
+        present(detailVC, animated: true)
+
+    }
+    
+
+}
+
