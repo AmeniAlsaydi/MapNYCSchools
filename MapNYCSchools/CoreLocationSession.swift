@@ -12,9 +12,12 @@ import CoreLocation
 
 class CoreLocationSession: NSObject {
     public var locationManager: CLLocationManager
+    //public static var userLocation: CLLocationCoordinate2D
+    
     
     override init() {
         locationManager = CLLocationManager()
+        //userLocation = locationManager.location!.coordinate
         super.init()
         
         locationManager.delegate = self
@@ -35,10 +38,10 @@ class CoreLocationSession: NSObject {
     }
 }
 
-extension CoreLocationSession: CLLocationManagerDelegate {
+extension CoreLocationSession: CLLocationManagerDelegate { // works
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("location updated") // works 
+        print("location updated")
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
