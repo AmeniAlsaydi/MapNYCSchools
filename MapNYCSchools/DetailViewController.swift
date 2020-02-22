@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class DetailViewController: UIViewController {
     
@@ -21,10 +22,33 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var websitelabel: UILabel! // to make this work as a link i would need to give it a gesture so when tapped it goes to a safari viewconteoller.
     
     
+    private lazy var tapGesture: UITapGestureRecognizer = {
+        let gesture = UITapGestureRecognizer()
+        gesture.addTarget(self, action: #selector(didTap(_:)))
+        return gesture
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         updateUI()
+        websitelabel.isUserInteractionEnabled = true
+        websitelabel.addGestureRecognizer(tapGesture)
+        
+    }
+    
+    @objc private func didTap(_ gesture: UITapGestureRecognizer) {
+        
+        guard let website = school?.website else {
+            print("no website")
+            return
+        }
+        
+        let schoolWebsite = "https://www.\(website)"
+        
+        if let urlString = URL(string: schoolWebsite) {
+            let safariVC = SFSafariViewController(url: urlString)
+            present(safariVC, animated: true, completion: nil)
+        }
     }
 
     private func updateUI() {
