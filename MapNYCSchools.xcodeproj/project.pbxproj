@@ -16,6 +16,7 @@
 		B76B1D94240095DA0075A8E4 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B1D93240095DA0075A8E4 /* APIClient.swift */; };
 		B76B1D96240096BB0075A8E4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B1D95240096BB0075A8E4 /* Model.swift */; };
 		B76B1D99240097F90075A8E4 /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = B76B1D98240097F90075A8E4 /* ImageKit */; };
+		B76B1D9B24014B370075A8E4 /* CoreLocationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B1D9A24014B370075A8E4 /* CoreLocationSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		B76B1D8D2400920C0075A8E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B76B1D93240095DA0075A8E4 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		B76B1D95240096BB0075A8E4 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B76B1D9A24014B370075A8E4 /* CoreLocationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				B76B1D7F2400920A0075A8E4 /* AppDelegate.swift */,
 				B76B1D812400920A0075A8E4 /* SceneDelegate.swift */,
 				B76B1D832400920A0075A8E4 /* MapViewController.swift */,
+				B76B1D9A24014B370075A8E4 /* CoreLocationSession.swift */,
 				B76B1D93240095DA0075A8E4 /* APIClient.swift */,
 				B76B1D95240096BB0075A8E4 /* Model.swift */,
 				B76B1D852400920A0075A8E4 /* Main.storyboard */,
@@ -154,6 +157,7 @@
 			files = (
 				B76B1D96240096BB0075A8E4 /* Model.swift in Sources */,
 				B76B1D842400920A0075A8E4 /* MapViewController.swift in Sources */,
+				B76B1D9B24014B370075A8E4 /* CoreLocationSession.swift in Sources */,
 				B76B1D802400920A0075A8E4 /* AppDelegate.swift in Sources */,
 				B76B1D822400920A0075A8E4 /* SceneDelegate.swift in Sources */,
 				B76B1D94240095DA0075A8E4 /* APIClient.swift in Sources */,

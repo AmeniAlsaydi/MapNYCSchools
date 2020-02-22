@@ -24,6 +24,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="W2t-ki-IGn"/>
+                    <connections>
+                        <outlet property="mapView" destination="Kfj-RI-fPM" id="N1q-eU-VS5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import MapKit
 
 class MapViewController: UIViewController {
     
+    
+    
     var schools = [School]()
     
-
+    @IBOutlet weak var mapView: MKMapView!
+    private var locationSession = CoreLocationSession()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,7 +32,6 @@ class MapViewController: UIViewController {
                 print("error getting schools: \(appError)")
             case .success(let schools):
                 self.schools = schools
-                print(schools.count )
             }
         }
     }
